@@ -77,7 +77,7 @@ function SplitCostApp() {
                 total = total + Number(expense.amount);
             }
         }
-        const unsettledAmount = total / (this.users.length + this.addNewUseer.length);
+        const unsettledAmount = total / this.users.length;
         this.unsettledAmount = unsettledAmount.toFixed(2);
     }
 
@@ -105,6 +105,8 @@ function SplitCostApp() {
         document.getElementById("addNewUser").addEventListener('click', () => {
             const randomValue = parseInt(Math.random() *100);
             this.addUser('Alex', 'alex@gmail.com', '0404045678', `https://randomuser.me/api/portraits/women/${randomValue}.jpg`);
+        this.calculateUnsettledAmount();
+        this.displayUnsettledAmount();
         })
     }
 }

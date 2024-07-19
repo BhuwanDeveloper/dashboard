@@ -55,6 +55,7 @@ h3 {
     padding: 20px 0;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .users-wrapper img {
